@@ -19,7 +19,7 @@ Here's the updated README file with the new project structure and Day 5 updates 
 
 ## Project Setup
 
-### Day 1: Project Structure and Dependencies
+### Project Structure and Dependencies
 
 1. **Maven Project Initialization**  
    - Set up a standard Maven project structure, including the following directory layout:
@@ -87,7 +87,7 @@ Here's the updated README file with the new project structure and Day 5 updates 
 
 ---
 
-### Day 2: Configuration Setup
+### Configuration Setup
 
 1. **Configure Logging (log4j2)**  
    - Set up `log4j2.xml` to manage application logs:
@@ -120,7 +120,7 @@ Here's the updated README file with the new project structure and Day 5 updates 
 
 ---
 
-### Day 3: Secret Key Generation
+### Secret Key Generation
 
 1. **Base64 Encoding/Decoding (`Base64EncodeDecodeUtil`)**  
    - Utility to encode and decode byte arrays and strings.
@@ -136,7 +136,7 @@ Here's the updated README file with the new project structure and Day 5 updates 
 
 ---
 
-### Day 4: Data Encryption
+### Data Encryption
 
 1. **Encrypt and Decrypt Utility (`CryptoUtil`)**  
    - Implements AES encryption and decryption with the transformation `AES/CBC/PKCS5Padding`.
@@ -150,63 +150,6 @@ Here's the updated README file with the new project structure and Day 5 updates 
 
 3. **Unit Tests**  
    - Unit test for encryption and decryption methods.
-
----
-
-### Day 5: Additional Project Structure
-
-1. **Updated Project Structure**
-    - Added new helper classes for better environment and configuration management.
-    - Enhanced secret key management and environment security handling.
-
-    ```plaintext
-    Java-Encryptor/
-    │
-    ├── envs/
-    │   ├── .env
-    │   ├── .env.dev
-    │   ├── .env.uat
-    │
-    ├── logs/
-    │   ├── test_error.log
-    │   ├── test_run.log
-    │
-    ├── src/
-    │   ├── main/
-    │   │   ├── java/
-    │   │   └── resources/
-    │   │       └── config.properties
-    │   │
-    │   ├── test/
-    │       ├── java/
-    │       │   └── com/
-    │       │       └── encryption/
-    │       │           ├── helpers/
-    │       │           │   ├── ConfigLoader
-    │       │           │   ├── EnvironmentLoader
-    │       │           │   ├── ErrorHandler
-    │       │           │   └── SecureEnvManager
-    │       │           │
-    │       │           ├── tests/
-    │       │           │   ├── functional/
-    │       │           │   └── unit/
-    │       │           │       └── ecryption/
-    │       │           │           ├── DataEncryptor
-    │       │           │           ├── SecretKeyGenerator
-    │       │           │           └── EnvAndPropertiesTest
-    │       │           │
-    │       │           └── utils/
-    │       │               ├── Base64EncodeDecodeUtil
-    │       │               ├── CryptoUtil
-    │       │               ├── KeyGeneratorUtil
-    │       │               ├── LoggerUtil
-    │       │               └── PathManagerUtil
-    │       │
-    │       └── resources/
-    │           └── log4j2.xml
-    │
-    └── target/
-    ```
 
 ---
 
@@ -233,14 +176,9 @@ Here's the updated README file with the new project structure and Day 5 updates 
 ## Unit Tests
 - Unit tests are available under the `tests.unit` package, ensuring the correct functionality of secret key generation, environment loading, and encryption processes.
 
-## License
-This project is licensed under the MIT License.
-
 ---
 
 ## Conclusion
 **Java-Encryptor** provides a robust solution for securely managing and encrypting environment variables in a Java-based project, utilizing AES encryption and best practices for configuration management and logging. The modular approach ensures flexibility for different environments and allows easy integration into existing projects.
 
 ---
-
-Let me know if you'd like to add or modify anything else!
