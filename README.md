@@ -20,8 +20,58 @@ Here's the updated README file with the new project structure and Day 5 updates 
 ## Project Setup
 
 ### Day 1: Project Structure and Dependencies
+
 1. **Maven Project Initialization**  
-   - Set up a standard Maven project structure.
+   - Set up a standard Maven project structure, including the following directory layout:
+
+     ```plaintext
+     Java-Encryptor/
+     │
+     ├── envs/
+     │   ├── .env
+     │   ├── .env.dev
+     │   ├── .env.uat
+     │
+     ├── logs/
+     │   ├── test_error.log
+     │   ├── test_run.log
+     │
+     ├── src/
+     │   ├── main/
+     │   │   ├── java/
+     │   │   └── resources/
+     │   │       └── config.properties
+     │   │
+     │   ├── test/
+     │       ├── java/
+     │       │   └── com/
+     │       │       └── encryption/
+     │       │           ├── helpers/
+     │       │           │   ├── ConfigLoader
+     │       │           │   ├── EnvironmentLoader
+     │       │           │   ├── ErrorHandler
+     │       │           │   └── SecureEnvManager
+     │       │           │
+     │       │           ├── tests/
+     │       │           │   ├── functional/
+     │       │           │   └── unit/
+     │       │           │       └── ecryption/
+     │       │           │           ├── DataEncryptor
+     │       │           │           ├── SecretKeyGenerator
+     │       │           │           └── EnvAndPropertiesTest
+     │       │           │
+     │       │           └── utils/
+     │       │               ├── Base64EncodeDecodeUtil
+     │       │               ├── CryptoUtil
+     │       │               ├── KeyGeneratorUtil
+     │       │               ├── LoggerUtil
+     │       │               └── PathManagerUtil
+     │       │
+     │       └── resources/
+     │           └── log4j2.xml
+     │
+     └── target/
+     ```
 
 2. **Dependencies**
    - Add necessary dependencies to the `pom.xml` file:
