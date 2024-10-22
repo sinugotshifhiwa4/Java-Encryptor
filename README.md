@@ -1,3 +1,5 @@
+README file with the project structure:
+
 ---
 
 # Java-Encryptor
