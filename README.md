@@ -1,3 +1,7 @@
+Here's the updated README file with the new project structure and Day 5 updates added:
+
+---
+
 # Java-Encryptor
 
 ## Overview
@@ -99,6 +103,63 @@
 
 ---
 
+### Day 5: Additional Project Structure
+
+1. **Updated Project Structure**
+    - Added new helper classes for better environment and configuration management.
+    - Enhanced secret key management and environment security handling.
+
+    ```plaintext
+    Java-Encryptor/
+    │
+    ├── envs/
+    │   ├── .env
+    │   ├── .env.dev
+    │   ├── .env.uat
+    │
+    ├── logs/
+    │   ├── test_error.log
+    │   ├── test_run.log
+    │
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/
+    │   │   └── resources/
+    │   │       └── config.properties
+    │   │
+    │   ├── test/
+    │       ├── java/
+    │       │   └── com/
+    │       │       └── encryption/
+    │       │           ├── helpers/
+    │       │           │   ├── ConfigLoader
+    │       │           │   ├── EnvironmentLoader
+    │       │           │   ├── ErrorHandler
+    │       │           │   └── SecureEnvManager
+    │       │           │
+    │       │           ├── tests/
+    │       │           │   ├── functional/
+    │       │           │   └── unit/
+    │       │           │       └── ecryption/
+    │       │           │           ├── DataEncryptor
+    │       │           │           ├── SecretKeyGenerator
+    │       │           │           └── EnvAndPropertiesTest
+    │       │           │
+    │       │           └── utils/
+    │       │               ├── Base64EncodeDecodeUtil
+    │       │               ├── CryptoUtil
+    │       │               ├── KeyGeneratorUtil
+    │       │               ├── LoggerUtil
+    │       │               └── PathManagerUtil
+    │       │
+    │       └── resources/
+    │           └── log4j2.xml
+    │
+    └── target/
+    ```
+
+---
+
 ## Usage
 
 1. **Secret Key Generation**  
@@ -129,3 +190,7 @@ This project is licensed under the MIT License.
 
 ## Conclusion
 **Java-Encryptor** provides a robust solution for securely managing and encrypting environment variables in a Java-based project, utilizing AES encryption and best practices for configuration management and logging. The modular approach ensures flexibility for different environments and allows easy integration into existing projects.
+
+---
+
+Let me know if you'd like to add or modify anything else!
