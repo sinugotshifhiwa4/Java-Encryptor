@@ -1,5 +1,3 @@
-Here's the updated README file with the new project structure and Day 5 updates added:
-
 ---
 
 # Java-Encryptor
